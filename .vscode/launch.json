@@ -9,7 +9,7 @@
       "type": "node",
       "request": "launch",
       "preLaunchTask": "build",
-      "cwd": "${workspaceFolder}/src",
+      "cwd": "${workspaceFolder}",
       "runtimeExecutable": "npm",
       "runtimeArgs": ["run", "start"],
       "skipFiles": ["<node_internals>/**"],
