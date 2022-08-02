@@ -83,6 +83,11 @@ jobs:
               --server ${{ env.CONTAINER_REGISTRY }} \
               --username  ${{ secrets.CONTAINER_REGISTRY_USERNAME }} \
               --password ${{ secrets.CONTAINER_REGISTRY_PASSWORD }}
+            az containerapp ingress enable \
+              --name ${{ env.CONTAINERAPP_NAME }} \
+              --resource-group ${{ env.RESOURCE_GROUP_NAME }} \
+              --target-port 3000 \
+              --type external
             az containerapp update \
               --name ${{ env.CONTAINERAPP_NAME }} \
               --resource-group ${{ env.RESOURCE_GROUP_NAME }} \
