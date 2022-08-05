@@ -11,7 +11,7 @@ const api = axios.create({
 });
 
 /* GET home page. */
-router.get("/", async function (req, res, next) {
+router.get("/", async (req, res, next) => {
   try {
     console.log("Sending request to backend albums api");
     const data = await api.get("/albums");
